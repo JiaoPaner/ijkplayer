@@ -71,7 +71,7 @@ echo ""
 echo "--------------------"
 echo "[*] make NDK standalone toolchain"
 echo "--------------------"
-. ./tools/do-detect-env.sh
+#. ./tools/do-detect-env.sh
 FF_MAKE_TOOLCHAIN_FLAGS=$IJK_MAKE_TOOLCHAIN_FLAGS
 FF_MAKE_FLAGS=$IJK_MAKE_FLAG
 FF_GCC_VER=$IJK_GCC_VER
@@ -81,7 +81,7 @@ FF_GCC_64_VER=$IJK_GCC_64_VER
 #----- armv7a begin -----
 if [ "$FF_ARCH" = "armv7a" ]; then
     FF_TOOLCHAIN_ARCH=arm
-    FF_ANDROID_PLATFORM=16
+    FF_ANDROID_PLATFORM=21
     FF_BUILD_NAME=ffmpeg-armv7a
     FF_BUILD_NAME_OPENSSL=openssl-armv7a
     FF_BUILD_NAME_LIBSOXR=libsoxr-armv7a
@@ -362,7 +362,7 @@ if [ -f "./config.h" ]; then
 else
     which $CC
     ./configure $FF_CFG_FLAGS \
-        --extra-cflags="$FF_CFLAGS $FF_EXTRA_CFLAGS" \
+        --extra-cflags="$FF_CFLAGS $FF_EXTRA_CFLAGS -Wno-array-parameter -Wno-implicit-function-declaration -Wno-missing-prototypes -Wno-unused-but-set-variable -Wno-newline-eof -Wno-old-style-definition -Wno-implicit-fallthrough -Wno-incompatible-function-pointer-types" \
         --extra-ldflags="$FF_DEP_LIBS $FF_EXTRA_LDFLAGS"
     make clean
 fi

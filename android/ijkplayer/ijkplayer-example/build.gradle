@@ -15,7 +15,7 @@ android {
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
-        minSdk 19
+        minSdk 21
 
         ndk {
             // Specifies the ABI configurations of your native

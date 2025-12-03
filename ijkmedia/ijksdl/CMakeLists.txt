@@ -21,6 +21,7 @@
 cmake_minimum_required(VERSION 3.6)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -z max-page-size=16384 -z common-page-size=16384")
 
 set(BASE_SOURCES
     ijksdl_class.h

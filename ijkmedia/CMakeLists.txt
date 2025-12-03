@@ -32,6 +32,7 @@ if(IJK_DESKTOP_UNI)
   # "-Wno-deprecated-declarations")
   target_compile_options(portaudio PRIVATE "-Wno-deprecated-declarations")
 endif()
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -z max-page-size=16384 -z common-page-size=16384")
 
 add_subdirectory(ijksdl)
 add_subdirectory(ijkplayer)

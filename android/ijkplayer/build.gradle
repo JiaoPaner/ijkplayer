@@ -39,7 +39,7 @@ ext {
     buildToolsVersion = "30.0.3"
     targetSdkVersion = 30
 
-    ndkVersion = "21.1.6352462"
+    ndkVersion = "29.0.14206865"
 
     versionCode = property("VERSION_CODE").toInteger()
     versionName = property("VERSION_NAME")

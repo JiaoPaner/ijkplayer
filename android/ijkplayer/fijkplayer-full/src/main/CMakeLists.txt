@@ -27,6 +27,8 @@ set(CMAKE_CXX_STANDARD 11)
 
 add_definitions(-DANDROID)
 
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -z max-page-size=16384 -z common-page-size=16384")
+
 message(STATUS "CMAKE_BUILD_TYPE: ${CMAKE_BUILD_TYPE}")
 message(STATUS "ANDROID_PLATFORM_LEVEL:${ANDROID_PLATFORM_LEVEL}")
 message(STATUS "ANDROID_ABI:${ANDROID_ABI}")
@@ -83,3 +85,23 @@ add_dependencies(ijkffmpeg cpffmpeg)
 
 message(STATUE "${CMAKE_LIBRARY_OUTPUT_DIRECTORY} ${PROJECT_BINARY_DIR}")
 add_subdirectory(${FIJKROOT_PATH}/ijkmedia ijkmedia)
+
+# 对于 ijkffmpeg 库
+if(TARGET ijkffmpeg)
+    set_target_properties(ijkffmpeg PROPERTIES
+        LINK_FLAGS "-z max-page-size=16384 -z common-page-size=16384"
+    )
+endif()
+
+# 对于其他库目标
+if(TARGET ijksdl)
+    set_target_properties(ijksdl PROPERTIES
+        LINK_FLAGS "-z max-page-size=16384 -z common-page-size=16384"
+    )
+endif()
+
+if(TARGET ijkplayer) 
+    set_target_properties(ijkplayer PROPERTIES
+        LINK_FLAGS "-z max-page-size=16384 -z common-page-size=16384"
+    )
+endif()

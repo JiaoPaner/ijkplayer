@@ -23,6 +23,7 @@ if (ANDROID)
         set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -mfloat-abi=soft")
     endif ()
 endif ()
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -z max-page-size=16384 -z common-page-size=16384")
 
 set(BUILD_SOURCES
     ff_fferror.h

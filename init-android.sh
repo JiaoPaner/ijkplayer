@@ -17,8 +17,8 @@
 #
 
 # IJK_FFMPEG_UPSTREAM=git://git.videolan.org/ffmpeg.git
-IJK_FFMPEG_UPSTREAM=https://github.com/Bilibili/FFmpeg.git
-IJK_FFMPEG_FORK=https://github.com/FlutterPlayer/FFmpeg.git
+IJK_FFMPEG_UPSTREAM=https://gh.llkk.cc/https://github.com/Bilibili/FFmpeg.git
+IJK_FFMPEG_FORK=https://gh.llkk.cc/https://github.com/FlutterPlayer/FFmpeg.git
 IJK_FFMPEG_COMMIT=ff4.0-20250514
 IJK_FFMPEG_LOCAL_REPO=extra/ffmpeg
 

@@ -19,8 +19,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname "$DIR")
 
-IJK_LIBYUV_UPSTREAM=https://github.com/Bilibili/libyuv.git
-IJK_LIBYUV_FORK=https://github.com/Bilibili/libyuv.git
+IJK_LIBYUV_UPSTREAM=https://gh.llkk.cc/https://github.com/Bilibili/libyuv.git
+IJK_LIBYUV_FORK=https://gh.llkk.cc/https://github.com/Bilibili/libyuv.git
 IJK_LIBYUV_COMMIT=ijk-r0.2.1-dev
 IJK_LIBYUV_LOCAL_REPO=$BASEDIR/extra/libyuv
 

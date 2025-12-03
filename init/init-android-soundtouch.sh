@@ -19,8 +19,8 @@
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 BASEDIR=$(dirname "$DIR")
 
-IJK_SOUNDTOUCH_UPSTREAM=https://github.com/Bilibili/soundtouch.git
-IJK_SOUNDTOUCH_FORK=https://github.com/Bilibili/soundtouch.git
+IJK_SOUNDTOUCH_UPSTREAM=https://gh.llkk.cc/https://github.com/Bilibili/soundtouch.git
+IJK_SOUNDTOUCH_FORK=https://gh.llkk.cc/https://github.com/Bilibili/soundtouch.git
 IJK_SOUNDTOUCH_COMMIT=ijk-r0.1.2-dev
 IJK_SOUNDTOUCH_LOCAL_REPO=$BASEDIR/extra/soundtouch
 
